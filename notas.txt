@@ -1,0 +1,10 @@
+para crear 
+
+modulo: nest g module nombreModulo
+servicio: nest g service nombreModulo --no-spec
+controller: nest g controller nombreModulo --no-spec
+
+-crear funcion que me retorne un UUID para el nombre de las imagenes.
+-al eliminar un evento, elimine tambien la imagen 
+-validar que no se creen usuarios con el mismo correo
+
