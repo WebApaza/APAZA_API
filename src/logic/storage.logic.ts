@@ -12,7 +12,8 @@ export class ImageService {
 
     try {
       const webpImage = await this.convertToWebp(img);
-      await storageRef.put(webpImage);
+      const uint8Array = new Uint8Array(webpImage); //solucion: incompatibilidad de tipos Bufffer -> Uint8Array
+      await storageRef.put(uint8Array);
       const url = await storageRef.getDownloadURL();
       return url;
     } catch (error) {

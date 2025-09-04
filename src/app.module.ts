@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { EventModule } from './event/event.module';
+import { CollaboratorModule } from './collaborator/collaborator.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserModule } from './user/user.module';
 import { GalleryModule } from './gallery/gallery.module';
@@ -19,6 +20,7 @@ import config from 'config/configuration.app';
       }),
     }),
     EventModule,
+    CollaboratorModule,
     ConfigModule.forRoot({
       envFilePath: `${process.env.NODE_ENV}.env`,
       load: [config],
