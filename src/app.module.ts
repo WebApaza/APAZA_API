@@ -22,7 +22,8 @@ import config from 'config/configuration.app';
     EventModule,
     CollaboratorModule,
     ConfigModule.forRoot({
-      envFilePath: `${process.env.NODE_ENV}.env`,
+      //envFilePath: `${process.env.NODE_ENV}.env`,
+      envFilePath: '.env',
       load: [config],
       isGlobal: true
     }
